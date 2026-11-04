@@ -1,5 +1,7 @@
 # Cosmic MoleculeLab — Organic Chemistry Virtual Laboratory
 
+demo link: https://chemquest-virtualuniverse.netlify.app/
+
 A responsive, static Netlify application with a cosmic visual theme and an interactive SMILES chemistry workspace.
 
 ## Included
