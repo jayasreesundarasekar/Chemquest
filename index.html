@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#05050b">
+<title>Cosmic Molecule Lab — Chemistry Beyond the Stars</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="starfield" aria-hidden="true"></canvas>
+<div class="scanlines" aria-hidden="true"></div>
+<div class="noise" aria-hidden="true"></div>
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-icon">✦</span><span>COSMIC<span class="brand-pink">MOLECULE</span><small>PIXEL CHEMISTRY UNIVERSE</small></span></a>
+  <nav><a href="#explore">Explore</a><a href="#lab">The Lab</a><a href="#smiles-lab">SMILES Lab</a><a href="#missions">Missions</a></nav>
+  <div class="status"><i></i> SYSTEM ONLINE</div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow"><span class="pixel-dot"></span> WELCOME, SPACE CHEMIST <span class="eyebrow-code">[ SECTOR 07 ]</span></div>
+    <h1>CHEMISTRY<br>IN A <span class="gradient-word">COSMIC</span><br>DIMENSION<span class="cursor">_</span></h1>
+    <p class="hero-desc">Explore the tiny building blocks of everything — drifting through a pixelated universe of atoms, bonds, and stellar secrets.</p>
+    <div class="hero-actions"><a class="pixel-btn primary" href="#explore">▶ ENTER THE UNIVERSE</a><a class="pixel-btn secondary" href="#lab">OPEN THE LAB <span>↗</span></a></div>
+    <div class="hero-stats"><div><strong>15<span>+</span></strong><small>MOLECULES</small></div><b class="stat-divider"></b><div><strong>∞</strong><small>STAR SYSTEMS</small></div><b class="stat-divider"></b><div><strong>01</strong><small>MISSION: LEARN</small></div></div>
+  </div>
+  <div class="hero-visual">
+    <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit orbit-c"></div>
+    <div class="planet planet-large"><div class="planet-pixel"></div><div class="planet-crater c1"></div><div class="planet-crater c2"></div><div class="planet-crater c3"></div></div>
+    <div class="molecule-float molecule-one"><span class="atom atom-c"></span><span class="bond"></span><span class="atom atom-o"></span><span class="bond bond2"></span><span class="atom atom-n"></span></div>
+    <div class="molecule-float molecule-two"><span class="atom atom-h"></span><span class="bond"></span><span class="atom atom-c"></span><span class="bond bond2"></span><span class="atom atom-h"></span><span class="bond bond3"></span><span class="atom atom-o"></span></div>
+    <div class="satellite"><span>✦</span></div><div class="pixel-comet"></div>
+    <div class="hud hud-top"><span>MOLECULE ID</span><strong>AX-09 / 3D</strong></div>
+    <div class="hud hud-bottom"><span>ORBITAL STATUS</span><strong class="mint">STABLE ◉</strong></div>
+    <div class="hero-caption">FIG 01. / ATOMIC DREAMSCAPE</div>
+  </div>
+</section>
+
+<section class="ticker"><div class="ticker-track"><span>✦ ATOMS ARE STARDUST</span><b>///</b><span>PIXEL PERFECT CHEMISTRY</span><b>///</b><span>EXPLORE THE UNSEEN</span><b>///</b><span>ATOMS ARE STARDUST</span><b>///</b><span>PIXEL PERFECT CHEMISTRY</span><b>///</b><span>EXPLORE THE UNSEEN</span><b>///</b></div></section>
+
+<section class="section" id="explore">
+  <div class="section-heading"><div><div class="eyebrow">01 / THE CONSTELLATION</div><h2>MOLECULE <span>SELECT</span></h2></div><p>Pick a molecule. Enter its orbit.<br><span class="muted">A tiny universe inside every structure.</span></p></div>
+  <div class="molecule-grid">
+    <button class="molecule-card active" data-molecule="water"><div class="card-art art-water"><div class="mini-mol"><i class="a blue"></i><i class="line l1"></i><i class="a red"></i><i class="line l2"></i><i class="a blue a2"></i></div><span class="card-coord">01 / H₂O</span></div><div class="card-info"><strong>WATER</strong><span>THE UNIVERSAL SOLVENT</span><b>H₂O <em>↗</em></b></div></button>
+    <button class="molecule-card" data-molecule="caffeine"><div class="card-art art-caffeine"><div class="ring ring1"></div><div class="ring ring2"></div><i class="a red r1"></i><i class="a purple r2"></i><span class="card-coord">02 / C₈H₁₀N₄O₂</span></div><div class="card-info"><strong>CAFFEINE</strong><span>THE COSMIC SPARK</span><b>C₈H₁₀N₄O₂ <em>↗</em></b></div></button>
+    <button class="molecule-card" data-molecule="aspirin"><div class="card-art art-aspirin"><div class="hexagon"></div><div class="hexagon hex2"></div><i class="a red r3"></i><i class="a cyan r4"></i><span class="card-coord">03 / C₉H₈O₄</span></div><div class="card-info"><strong>ASPIRIN</strong><span>THE ORBITAL RELIEF</span><b>C₉H₈O₄ <em>↗</em></b></div></button>
+    <button class="molecule-card" data-molecule="benzene"><div class="card-art art-benzene"><div class="hexagon hex3"></div><i class="a purple r5"></i><i class="a blue r6"></i><span class="card-coord">04 / C₆H₆</span></div><div class="card-info"><strong>BENZENE</strong><span>THE HEXAGONAL STAR</span><b>C₆H₆ <em>↗</em></b></div></button>
+  </div>
+</section>
+
+<section class="lab-section" id="lab">
+  <div class="section-heading"><div><div class="eyebrow">02 / DEEP SPACE LAB</div><h2>THE <span>MOLECULAR</span> CORE</h2></div><p>Rotate your perspective.<br><span class="muted">Molecule viewer · playful 3D mode</span></p></div>
+  <div class="lab-window">
+    <div class="lab-sidebar"><div class="lab-label">CURRENT SPECIMEN</div><h3 id="mol-name">WATER</h3><div class="formula" id="mol-formula">H₂O</div><p id="mol-note">A tiny molecule with a universe of importance. Two hydrogen atoms orbit one oxygen.</p><div class="lab-rule"></div><div class="lab-label">ELEMENT KEY</div><div class="element-key"><span><i class="key-dot oxygen"></i> Oxygen <b>O</b></span><span><i class="key-dot hydrogen"></i> Hydrogen <b>H</b></span><span><i class="key-dot carbon"></i> Carbon <b>C</b></span><span><i class="key-dot nitrogen"></i> Nitrogen <b>N</b></span></div><div class="lab-tip">✧ DRAG TO ROTATE<br>✧ SCROLL TO ZOOM</div></div>
+    <div class="viewer"><div class="viewer-top"><span>◉ LIVE STRUCTURE VIEW</span><span class="viewer-coords">X <b id="coord-x">00</b> / Y <b id="coord-y">00</b></span></div><canvas id="molecule-canvas"></canvas><div class="viewer-bottom"><span>RENDER MODE: PIXEL ORBITAL</span><button id="spin-toggle">⟳ AUTO SPIN: ON</button><button id="reset-view">RESET VIEW ↺</button></div><div class="viewer-crosshair">+</div></div>
+  </div>
+</section>
+
+
+<section class="section advanced-lab" id="smiles-lab">
+ <div class="section-heading"><div><div class="eyebrow">03 / VIRTUAL LABORATORY</div><h2>SMILES <span>MOLECULE ENGINE</span></h2></div><p>Decode a molecule from its notation.<br><span class="muted">Structure, descriptors and 3D conformations</span></p></div>
+ <div class="advanced-shell">
+  <aside class="lab-navigation">
+   <h3>🧪 Virtual Lab</h3><p class="nav-caption">NAVIGATION</p>
+   <a href="#smiles-lab">🏠 Home / SMILES Engine</a><a href="#theory">📖 Theory</a><a href="#visualization">🧬 Molecular Visualization</a><a href="#properties">📊 Molecular Properties Report</a><a href="#analysis">📈 Structure–Property Analysis</a><a href="#assessment">📝 Assessment</a><a href="#final-report">📄 Final Project Report</a>
+   <div class="nav-note">STRUCTURE ENGINE<br><b>RDKit + 3Dmol.js</b></div>
+  </aside>
+  <div class="engine-content">
+   <div class="smiles-entry">
+    <label for="smiles-input">ENTER SMILES NOTATION</label>
+    <textarea id="smiles-input" rows="2" placeholder="Example: CC(=O)Oc1ccccc1C(=O)O"></textarea>
+    <div class="engine-actions"><button class="pixel-btn primary" id="analyze-smiles">✦ GENERATE MOLECULE</button><button class="pixel-btn secondary" id="load-example">LOAD ASPIRIN</button><span id="engine-status" role="status">Ready · Enter a valid SMILES</span></div>
+    <div class="smiles-help">SMILES (Simplified Molecular Input Line Entry System) represents molecular structure as text. Examples: ethanol <code>CCO</code> · benzene <code>c1ccccc1</code> · caffeine <code>Cn1c(=O)c2c(ncn2C)n(C)c1=O</code></div>
+   </div>
+   <div class="engine-grid">
+    <article class="engine-panel"><div class="panel-title">2D STRUCTURE <span>RDKit</span></div><div id="structure-2d" class="structure-output">Your 2D molecular structure will appear here.</div><div class="structure-meta" id="structure-meta">Awaiting molecule input</div></article>
+    <article class="engine-panel" id="visualization"><div class="panel-title">INTERACTIVE 3D VIEWER <span>3Dmol.js</span></div>
+     <div class="viewer-tools"><label for="render-style">Representation</label><select id="render-style"><option value="ballstick">Ball &amp; Stick</option><option value="stick">Stick</option><option value="sphere">Space filling</option><option value="wireframe">Wireframe</option><option value="line">Line</option></select><button id="reset-3d">RESET VIEW</button></div>
+     <div id="mol3d-viewer"><div class="viewer-placeholder">Generate a molecule to load its 3D model.</div></div><p class="viewer-disclaimer">3D coordinates are retrieved from PubChem when available. A 2D depiction is not presented as a 3D conformer.</p>
+    </article>
+   </div>
+   <article class="engine-panel properties-panel" id="properties"><div class="panel-title">MOLECULAR PROPERTIES REPORT <span>LIVE ANALYSIS</span></div><div id="property-grid" class="property-grid"><p>Properties will be calculated after a valid SMILES is entered.</p></div><div class="report-actions"><button id="download-report" class="pixel-btn secondary">DOWNLOAD REPORT</button><button id="copy-smiles" class="pixel-btn secondary">COPY CANONICAL SMILES</button></div></article>
+   <article class="engine-panel library-panel"><div class="panel-title">ORGANIC MOLECULE LIBRARY <span id="library-count">250 COMPOUNDS</span></div><input id="library-search" class="library-search" placeholder="Search by molecule name…"><div id="molecule-library" class="library-grid"></div><p class="library-note">Select a compound to retrieve its verified PubChem record and analyze its SMILES. Internet connection is required for library lookups.</p></article>
+   <div class="engine-grid lower-grid">
+    <article class="engine-panel" id="theory"><div class="panel-title">THEORY &amp; LEARNING</div><h3>Understanding SMILES</h3><p>Atoms are represented by element symbols; parentheses indicate branches, digits mark ring closures, and bond symbols describe connectivity. Lowercase symbols represent aromatic atoms.</p><p>Descriptors summarize structural features. They are computational estimates and do not replace experimental measurements.</p></article>
+    <article class="engine-panel" id="analysis"><div class="panel-title">STRUCTURE–PROPERTY ANALYSIS</div><h3>What do descriptors tell us?</h3><p><b>LogP:</b> estimated lipophilicity. <b>TPSA:</b> topological polar surface area. <b>HBD/HBA:</b> hydrogen-bond donors and acceptors. <b>Rotatable bonds:</b> a simple flexibility indicator.</p><p id="analysis-summary">Analyze a molecule to see its descriptor profile.</p></article>
+   </div>
+   <article class="engine-panel" id="assessment"><div class="panel-title">ASSESSMENT</div><p>Which SMILES feature denotes a ring closure?</p><div class="quiz-options"><button data-answer="wrong">Parentheses</button><button data-answer="correct">Matching digits</button><button data-answer="wrong">Equals sign</button></div><p id="quiz-feedback" aria-live="polite"></p></article>
+   <article class="engine-panel" id="final-report"><div class="panel-title">FINAL PROJECT REPORT</div><p>Generate a molecule report after analysis. The downloadable report includes input notation, canonical notation, formula and calculated descriptors.</p></article>
+  </div>
+ </div>
+</section>
+\n<section class="missions" id="missions">
+  <div class="section-heading"><div><div class="eyebrow">03 / YOUR QUEST LOG</div><h2>SCIENCE IS A <span>GAME</span></h2></div><p>Collect knowledge, one atom at a time.</p></div>
+  <div class="mission-grid">
+    <article class="mission"><div class="mission-icon">⌘</div><div class="mission-id">QUEST 001</div><h3>DECODE THE ATOM</h3><p>Discover what protons, neutrons, and electrons are doing in their tiny pixel worlds.</p><a href="#explore">START QUEST <span>→</span></a><div class="quest-progress"><i style="width:24%"></i></div><small>PROGRESS: 24%</small></article>
+    <article class="mission"><div class="mission-icon pink">✧</div><div class="mission-id">QUEST 002</div><h3>BUILD A BOND</h3><p>Learn how atoms connect to create molecules — the building blocks of our universe.</p><a href="#lab">START QUEST <span>→</span></a><div class="quest-progress"><i style="width:0%"></i></div><small>PROGRESS: 0%</small></article>
+    <article class="mission"><div class="mission-icon mint">◈</div><div class="mission-id">QUEST 003</div><h3>EXPLORE THE UNKNOWN</h3><p>Read molecular formulas and uncover the hidden patterns inside chemical structures.</p><a href="#lab">START QUEST <span>→</span></a><div class="quest-progress"><i style="width:0%"></i></div><small>PROGRESS: 0%</small></article>
+  </div>
+</section>
+</main>
+<footer><a class="brand" href="#"><span class="brand-icon">✦</span><span>COSMIC<span class="brand-pink">MOLECULE</span><small>PIXEL CHEMISTRY UNIVERSE</small></span></a><p>MADE OF STARDUST. BUILT WITH CURIOSITY. <span>© 2026</span></p><div class="footer-signal">✦ SIGNAL FROM SECTOR 07</div></footer>
+<script src="https://unpkg.com/3dmol@2.4.2/build/3Dmol-min.js"></script>
+<script src="https://unpkg.com/@rdkit/rdkit/dist/RDKit_minimal.js"></script>
+<script src="app.js"></script><script src="advanced.js"></script>
+</body>
+</html>
